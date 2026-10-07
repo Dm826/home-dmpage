@@ -3,169 +3,417 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="郑东明(Guanchen)的个人主页。专注于网站搭建与技术支持、AI私有化部署、海外业务运营与广告投放的一站式技术与营销解决方案。">
-    <meta name="keywords" content="郑东明, Guanchen, 网站搭建, AI部署, 海外运营, 广告投放, 技术支持">
+    <meta name="description" content="郑东明(Guanchen)的个人主页。提供独立站与国际站搭建、服务器架构优化、大模型本地部署、AI中转站私有化、企业专属Skill定制、海外运营与Google/社媒广告代运营一站式服务。">
+    <meta name="keywords" content="郑东明, Guanchen, 独立站搭建, 国际站优化, 服务器调优, AI私有化部署, 大模型本地部署, Skill定制, 海外运营, Google广告代运营, 社媒广告">
     <meta name="author" content="郑东明 Guanchen">
-    <meta property="og:title" content="郑东明 Guanchen - 技术与营销解决方案专家">
-    <meta property="og:description" content="专注于提供一站式技术与营销解决方案：网站技术、AI私有化部署、海外业务与广告。">
+    
+    <!-- Open Graph / 社交分享 -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="郑东明 Guanchen - 网站技术 / AI私有化部署 / 海外运营 / 广告投放">
+    <meta property="og:description" content="专注网站与技术、AI私有化部署、海外代运营与广告投放，提供专业高效的数字化解决方案。">
     <meta property="og:image" content="https://www.dmpage.com/pic/home-dmpage.jpg">
     <meta property="og:url" content="https://www.dmpage.com/">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👋</text></svg>">
-    <title>郑东明 Guanchen - 技术与营销解决方案专家</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+    <title>郑东明 Guanchen - 技术与营销解决方案</title>
+    
     <style>
         :root {
-            --primary-color: #2563eb;
-            --text-main: #1f2937;
-            --text-muted: #4b5563;
-            --bg-color: #f3f4f6;
-            --card-bg: #ffffff;
+            --primary: #1e293b;
+            --primary-accent: #2563eb;
+            --accent-hover: #1d4ed8;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --border-color: #e2e8f0;
+            --border-hover: #cbd5e1;
         }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: var(--text-main);
-            background-color: var(--bg-color);
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 30px 16px;
             display: flex;
             justify-content: center;
-            min-height: 100vh;
-            box-sizing: border-box;
         }
+
         .container {
-            background-color: var(--card-bg);
             width: 100%;
-            max-width: 800px;
-            padding: 40px;
+            max-width: 860px;
+            background: var(--bg-card);
             border-radius: 16px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-            animation: fadeIn 0.8s ease-out;
+            padding: 44px 36px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 0.6s ease-out;
         }
+
         @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
+            from { opacity: 0; transform: translateY(12px); }
             to { opacity: 1; transform: translateY(0); }
         }
+
+        /* 头部介绍 */
         header {
             text-align: center;
-            margin-bottom: 30px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
         }
+
         h1 {
-            margin: 0;
-            font-size: 2.2em;
-            color: #111827;
+            font-size: 2.1rem;
+            font-weight: 700;
+            color: var(--primary);
+            letter-spacing: -0.02em;
         }
+
         .subtitle {
-            color: var(--primary-color);
+            font-size: 1.05rem;
+            color: var(--primary-accent);
             font-weight: 600;
-            margin-top: 8px;
-            font-size: 1.1em;
+            margin-top: 6px;
         }
-        .intro {
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 1.05em;
+
+        .bio {
+            margin-top: 14px;
             color: var(--text-muted);
+            font-size: 0.98rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
-        .services {
+
+        /* 快捷联系栏 (CTA) */
+        .cta-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 28px 0;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-accent);
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            background-color: #ffffff;
+            color: var(--text-main);
+            border-color: var(--border-color);
+        }
+        .btn-outline:hover {
+            background-color: #f1f5f9;
+            border-color: var(--border-hover);
+            transform: translateY(-1px);
+        }
+
+        /* 业务模块大卡片 */
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 36px 0 18px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
         }
+
         .service-card {
-            background: #f8fafc;
-            padding: 24px 20px;
+            background: #ffffff;
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            text-align: center;
-            border: 1px solid #e2e8f0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 22px;
+            transition: all 0.2s ease;
         }
+
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-            border-color: #cbd5e1;
+            border-color: #94a3b8;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.04);
+            transform: translateY(-2px);
         }
-        .service-card h3 {
-            margin-top: 0;
-            color: var(--primary-color);
-            font-size: 1.2em;
-            margin-bottom: 10px;
+
+        .service-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #f1f5f9;
         }
-        .service-card p {
-            margin: 0;
-            font-size: 0.95em;
+
+        .service-icon {
+            font-size: 1.4rem;
+        }
+
+        .service-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .service-list {
+            list-style: none;
+        }
+
+        .service-list li {
+            position: relative;
+            padding-left: 18px;
+            font-size: 0.92rem;
             color: var(--text-muted);
+            margin-bottom: 8px;
+            line-height: 1.5;
         }
-        .card-section {
-            margin-top: 50px;
+
+        .service-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .service-list li::before {
+            content: "•";
+            position: absolute;
+            left: 4px;
+            color: var(--primary-accent);
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+
+        /* 名片图展示 */
+        .card-view {
+            margin-top: 40px;
             text-align: center;
+            background: #f8fafc;
+            border: 1px dashed var(--border-color);
+            border-radius: 14px;
+            padding: 28px 20px;
         }
-        .card-section h3 {
-            color: #1f2937;
-            margin-bottom: 20px;
+
+        .card-view h3 {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 18px;
+            font-weight: 600;
         }
-        .card-section img {
+
+        .card-view img {
             max-width: 100%;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
             transition: transform 0.3s ease;
         }
-        .card-section img:hover {
-            transform: scale(1.02);
+
+        .card-view img:hover {
+            transform: scale(1.01);
         }
+
+        /* 底部版权与信息 */
         footer {
-            margin-top: 50px;
+            margin-top: 44px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
             text-align: center;
             color: #94a3b8;
-            font-size: 0.9em;
-            border-top: 1px solid #e5e7eb;
-            padding-top: 20px;
+            font-size: 0.88rem;
         }
-        @media (max-width: 600px) {
-            .container { padding: 30px 20px; }
-            body { padding: 20px 10px; }
-            h1 { font-size: 1.8em; }
+
+        /* 轻提示 Toast */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #0f172a;
+            color: #fff;
+            text-align: center;
+            border-radius: 8px;
+            padding: 12px 16px;
+            position: fixed;
+            z-index: 99;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            font-size: 0.9rem;
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
+            opacity: 0;
+            transition: opacity 0.3s, visibility 0.3s;
+        }
+
+        #toast.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* 移动端适配 */
+        @media (max-width: 680px) {
+            .container {
+                padding: 28px 18px;
+            }
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-bar {
+                flex-direction: column;
+            }
+            .btn {
+                justify-content: center;
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+
     <main class="container">
+        <!-- 头部概览 -->
         <header>
             <h1>郑东明 (Guanchen)</h1>
-            <div class="subtitle">技术与营销解决方案专家</div>
+            <div class="subtitle">技术专家 · 海外运营 · 数字化增长顾问</div>
+            <p class="bio">
+                专注于为企业与个人提供高可用网站技术架构、AI 私有化落地部署、以及海外独立站与广告运营一体化解决方案。
+            </p>
         </header>
-        
-        <section class="intro">
-            <p>您好！欢迎来到我的个人主页。</p>
-            <p>我致力于通过技术创新和数据驱动，帮助企业实现数字化转型与业务增长。</p>
+
+        <!-- 快速行动 / 交互联系栏 -->
+        <section class="cta-bar">
+            <a href="tel:+8613706797821" class="btn btn-primary" title="直接拨打电话">
+                <span>📞</span> 拨打电话：+86 137 0679 7821
+            </a>
+            <a href="mailto:dm@dmpage.com" class="btn btn-outline" title="直接发送邮件">
+                <span>✉️</span> 发送邮件：dm@dmpage.com
+            </a>
+            <button onclick="copyToClipboard('13706797821', '手机/微信号已复制！')" class="btn btn-outline" title="点击复制微信">
+                <span>💬</span> 复制微信号 (同手机)
+            </button>
         </section>
 
-        <section class="services">
+        <!-- 4 大核心业务矩阵 (结构化文本，SEO 友好) -->
+        <h2 class="section-title">💼 核心业务与服务范围</h2>
+        <div class="grid">
+            <!-- 业务 1 -->
             <div class="service-card">
-                <h3>💻 网站与技术支持</h3>
-                <p>全栈网站搭建、系统运维与持续的技术保障支持。</p>
+                <div class="service-header">
+                    <span class="service-icon">💻</span>
+                    <span class="service-title">网站与技术</span>
+                </div>
+                <ul class="service-list">
+                    <li>独立站、国际站搭建与全周期优化</li>
+                    <li>高并发服务器架构设计与性能调优</li>
+                    <li>电脑及 Mac 系统远程优化、环境配置与重装</li>
+                </ul>
             </div>
+
+            <!-- 业务 2 -->
             <div class="service-card">
-                <h3>🤖 AI 私有化部署</h3>
-                <p>量身定制的 AI 大模型私有化部署与业务集成方案。</p>
+                <div class="service-header">
+                    <span class="service-icon">🧠</span>
+                    <span class="service-title">AI 私有化部署</span>
+                </div>
+                <ul class="service-list">
+                    <li>大模型本地部署 (LLM 离线推理与知识库)</li>
+                    <li>AI 中转站私有化部署与高可用分发</li>
+                    <li>AI 批量作图与自动化工作流构建</li>
+                    <li>企业专属 Agent / Skill 定制与优化</li>
+                </ul>
             </div>
+
+            <!-- 业务 3 -->
             <div class="service-card">
-                <h3>🌍 海外业务与广告</h3>
-                <p>助力出海，提供精准的广告投放与海外业务运营指导。</p>
+                <div class="service-header">
+                    <span class="service-icon">🌐</span>
+                    <span class="service-title">海外运营</span>
+                </div>
+                <ul class="service-list">
+                    <li>独立站全流程代运营与本地化布局</li>
+                    <li>国际站精细化代运营与获客拓展</li>
+                    <li>页面内容优化与漏斗转化率提升 (CRO)</li>
+                </ul>
             </div>
+
+            <!-- 业务 4 -->
+            <div class="service-card">
+                <div class="service-header">
+                    <span class="service-icon">📈</span>
+                    <span class="service-title">广告投放</span>
+                </div>
+                <ul class="service-list">
+                    <li>Google 广告精准代运营 (Search / Shopping / GDN)</li>
+                    <li>海外主流社媒广告代运营 (Meta / TikTok 等)</li>
+                    <li>全链路数据分析追踪与 ROI 投放调优</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 原始名片展示区 -->
+        <section class="card-view">
+            <h3>📇 商务名片</h3>
+            <img src="pic/home-dmpage.jpg" alt="郑东明 Guanchen 商务名片" loading="lazy" decoding="async">
         </section>
 
-        <section class="card-section">
-            <h3>👇 详细业务与联系方式</h3>
-            <img src="pic/home-dmpage.jpg" alt="郑东明 Guanchen 的联系名片" loading="lazy" decoding="async">
-        </section>
-
+        <!-- 页脚 -->
         <footer>
-            <p>&copy; 2026 郑东明 Guanchen. All Rights Reserved.</p>
+            <p>&copy; 2026 郑东明 Guanchen · <a href="https://www.dmpage.com" style="color: inherit; text-decoration: none;">dmpage.com</a> · All Rights Reserved.</p>
         </footer>
     </main>
+
+    <!-- 复制提示弹窗 -->
+    <div id="toast">已复制到剪贴板</div>
+
+    <script>
+        function copyToClipboard(text, message) {
+            navigator.clipboard.writeText(text).then(function() {
+                showToast(message || '已成功复制到剪贴板！');
+            }).catch(function() {
+                // 回退方案
+                var input = document.createElement('input');
+                input.setAttribute('value', text);
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand('copy');
+                document.body.removeChild(input);
+                showToast(message || '已成功复制到剪贴板！');
+            });
+        }
+
+        function showToast(text) {
+            var toast = document.getElementById('toast');
+            toast.innerText = text;
+            toast.className = 'show';
+            setTimeout(function() {
+                toast.className = toast.className.replace('show', '');
+            }, 2500);
+        }
+    </script>
 </body>
 </html>
